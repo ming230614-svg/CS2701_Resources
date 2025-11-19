@@ -1,7 +1,9 @@
+
+import { Outlet } from "react-router-dom";
 import Menu from './Menu'
 import Sidebar from './Sidebar'
 
-export default function Layout({ children }) {
+export default function Layout() {
   return (
     <>
       <header></header>
@@ -9,7 +11,7 @@ export default function Layout({ children }) {
       <div className="container">
         <Sidebar />
         <main className="mainContent">
-          {children}
+          <Outlet />
         </main>
       </div>
     </>
